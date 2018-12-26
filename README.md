@@ -7,3 +7,5 @@ The project started initially just to code the animated background, having a sta
 The client really liked the result and, somehow, decided to ask my help to finish the whole project. At this moment it sounded as a really easy task, with a short PPT with all small adjustments that they needed. But actually we realized the website wasn't running smoothly, but showing some annoying issues with the responsiveness and cracking in some devices. Then I understood that I should restart the whole thing, from the scratch.
 
 Soon, this repo will be hosting the second phase of the project, which will turn this Brazilian website into a double-language website.
+
+https://paulopamplona.com/jobs/ginger/
