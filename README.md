@@ -1,6 +1,6 @@
 # Ginger Strategic Research
 
-This is the first client as the responsible developer, which means handling 100% of the code without the help of anyone but the internet itself.
+This is my first client as the responsible developer, which means handling 100% of the code without the help of anyone but the internet itself.
 
 The project started initially just to code the animated background, having a static PSD layout provided by a designer. Using some basic level skills in Adobe Illustrator, I turned the 'amoeba' shape into an SVG object, extracting this code to be handled into a JSON file, loaded into the DOM by some few lines of vanilla JS. After all these elements are animated in an infinite and not sync commands, mostly 'transform' properties, kind of creating a relaxing fluid background.
 
