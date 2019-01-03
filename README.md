@@ -8,4 +8,4 @@ The client really liked the result and, somehow, decided to ask my help to finis
 
 Soon, this repo will be hosting the second phase of the project, which will turn this Brazilian website into a double-language website.
 
-https://paulopamplona.com/jobs/ginger/
+http://www.ginger.com.br
