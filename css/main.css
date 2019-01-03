@@ -2543,8 +2543,8 @@ textarea {
       position: fixed;
       top: 50%;
       left: 64px;
-      -webkit-transform: translateY(-50%);
-              transform: translateY(-50%); } }
+      -webkit-transform: translateY(-40%);
+              transform: translateY(-40%); } }
   .page-header-alpha .navbar-sidebar .nav-item {
     opacity: 0.5;
     -webkit-transition: 0.6s;
