@@ -29,6 +29,8 @@
 
                 buildAmoebas(response);
                 
+                console.log(response.length);
+                
             } 
         }, false);  
         function isRequestOk(){

@@ -1,6 +1,24 @@
-'use strict';
-// var mainDocument = $(document);
+// 0. Language Buttons Activation
+  (function(){
+      'use strict';
 
+      var htmlText = document.querySelector('.navbar-sidebar').childNodes[1].childNodes[3].childNodes[1].childNodes[3].childNodes[0].data;
+
+      var en_Btn = document.querySelector('#idioms-1');
+      var pt_Btn = document.querySelector('#idioms-2');
+
+      if (htmlText == 'Why Ginger'){
+          en_Btn.style.color = "rgba(255,255,255,.9)";
+          en_Btn.style.opacity = "1";
+      } else if (htmlText == 'Por que a Ginger?') {
+          pt_Btn.style.color = "rgba(255,255,255,.9)";
+          pt_Btn.style.opacity = "1";
+      }
+  })();
+
+'use strict';
+
+// var mainDocument = $(document);
 // init foundation
 // $(document).foundation();
 
@@ -283,7 +301,10 @@ $(document).on('ready', function () {
 		$('#page-loader').addClass('p-hidden');
 		$('.section').addClass('anim');
 	});
-
+    
+    
+    
 
 });
 
+  

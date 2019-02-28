@@ -1,0 +1,34 @@
+.navbar-nav.navbar-nav-actions li.nav-item .btn.btn-outline-white.btn-round.langEN {
+    margin-right: 15px;
+}
+
+@media (min-width: 1024px) {
+
+    .navbar-nav.navbar-nav-actions {
+        position: fixed;
+        right: 64px;
+        top: 32px;
+    }
+
+      #idioms-1, #idioms-2 {
+          line-height: unset;
+          font-size: .8rem;
+          font-size: 1.4rem;
+          width: 1rem;
+          padding-left: 9px;
+          height: 0;  
+          border: 0 solid #fff;
+          outline: none;
+          font-weight: 900;
+          text-shadow: 2px 2px 5px black;
+          color: rgba(255,255,255,.5);
+          transform-origin: center;
+      }  
+
+      #idioms-1:hover, #idioms-2:hover {
+          outline: none;
+          color: #EE7E12;
+          -webkit-box-shadow: none;
+          box-shadow:  none;
+      }
+}

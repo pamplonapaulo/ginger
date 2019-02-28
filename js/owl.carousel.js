@@ -3461,10 +3461,11 @@
         items:4,
         margin:0,
         responsiveClass:true,
-        autoplay:false,
+        autoplay:true,
         autoplayTimeout:2000,
         autoplayHoverPause:true,
         rewind: true,
+        nav:true,
         responsive:{
             0:{
                 items:1

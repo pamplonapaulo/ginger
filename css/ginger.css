@@ -168,6 +168,145 @@ TEAM
     text-shadow: black 1px 1px 0px;
 }
 
+/* Owl Carousel custom nav arrows  */
+.owl-carousel .owl-nav button.owl-next,
+.owl-carousel .owl-nav button.owl-prev {
+    color: inherit;
+    border: none;
+    padding: 0!important;
+    font: inherit;
+    cursor: pointer;
+    position: relative;     
+    min-height: 46px;
+    line-height: 1.2;
+    border-radius: .25rem;
+    width: 70px;
+    -webkit-transition: .2s all;
+    transition: .2s all;
+}      
+
+button.owl-next span,
+button.owl-prev span {
+    font-size: 0;
+    top: 0;
+    margin-top: 8px;
+    width: 60px;
+    height: 30px;
+    position: absolute;
+    -webkit-transition: .2s all;
+    transition: .2s all;
+}      
+
+button.owl-next span:after,
+button.owl-prev span:after,
+button.owl-next span:before,
+button.owl-prev span:before {
+    position: absolute;
+    content: "";        
+    -webkit-transition: 5s all;
+    transition: 5s all;
+}  
+
+.owl-carousel .owl-nav button.owl-prev span:before,
+.owl-carousel .owl-nav button.owl-next span:before {
+    top: 9px;
+    -webkit-transition: .2s all;
+    transition: .2s all;
+}
+
+button.owl-next span:after,
+button.owl-prev span:after {
+    top: 14px;
+}
+
+button.owl-next span:after,
+button.owl-next span:before {
+    border-top: 2px solid #fff;
+}
+
+/* 'next' */
+button.owl-next {
+    padding-right: 3rem;
+    padding-left: 1.5rem; 
+    right: 0;
+    margin-left: 20px;
+}
+
+button.owl-next span {
+    right: 0;
+    margin-right: 5px;
+}  
+
+button.owl-next span:before {
+    right: 18px;
+    border-right-color: inherit;
+    width: 12px;
+    height: 12px;
+    border-right: 2px solid #fff;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    -webkit-transition: 1s;
+    transition: .2s all;
+}
+
+button.owl-next span:after {
+    width: 16px;
+    height: 2px;
+    right: 18px;
+    border-top: 2px solid #fff;
+    -webkit-transition: 1s;
+    transition: .2s all;
+}      
+
+/* 'previous' */
+button.owl-prev {
+    padding-left: 3rem;
+    padding-right: 1.5rem;      
+    left: 0;
+    margin-right: 20px;
+}      
+
+button.owl-prev span {
+    left: 0;
+    margin-left: 5px;
+}      
+
+button.owl-prev span:before {
+    left: 18px;
+    width: 12px;
+    height: 12px;
+    border-bottom-color: inherit;
+    border-left-color: inherit;
+    border-bottom: 2px solid #fff;
+    border-left: 2px solid #fff;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+button.owl-prev span:after {
+    width: 16px;
+    height: 2px;
+    border-top-color: inherit;
+    border-top: 2px solid #fff;
+    left: 19px;
+    -webkit-transition: .2s all;
+    transition: .2s all;
+}
+
+button.owl-next:focus,
+button.owl-prev:focus {
+    outline: none;
+}         
+
+.owl-dots {
+    display: none;
+}
+
+.owl-carousel button.owl-dot {
+    display: none;
+}      
+
+
 /*------------------
 SERVICES
 --------------------*/
@@ -571,6 +710,33 @@ MEDIA QUERIES
     [data-section="testimonials"] .verticalFixObjs p {
         font-size: 1.45rem;
     }
+    
+    .owl-carousel .owl-nav button.owl-next:hover,
+    .owl-carousel .owl-nav button.owl-prev:hover {
+        color: #8b8b8b;    
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+
+    button.owl-next:hover span:after {
+        right: .4rem;
+    }        
+
+    button.owl-prev:hover span:after {
+        left: .3rem;
+    }
+
+    button.owl-next:hover span:after,
+    button.owl-prev:hover span:after {
+        width: 35px;
+    }     
+
+    .owl-carousel .owl-nav button.owl-prev:hover span:before {
+        left: 6px;
+    }
+    .owl-carousel .owl-nav button.owl-next:hover span:before {
+        right: 0.4rem;
+    }    
 }
 
 @media (min-width: 1024px) and (max-width: 1200px) {

@@ -1,3 +1,10 @@
+<?php 
+session_start();
+include_once('pages/lang.php');
+?>
+
+
+
 <!doctype html>
 
 <html class="no-js" lang="pt-br">
@@ -63,22 +70,25 @@
   
   <!-- Ginger Custom CSS -->
   <link rel="stylesheet" href="./css/ginger-bg.min.css" />
-  <link rel="stylesheet" href="./css/owl.carousel.min.css">
-  <link rel="stylesheet" href="./css/ginger.min.css">
+  <link rel="stylesheet" href="./css/owl.carousel.min.css" />
+  <link rel="stylesheet" href="./css/ginger.min.css" />
+  <link rel="stylesheet" href="./css/idioms-btns.css">
 
   <script src="./js/vendor/modernizr-2.7.1.min.js"></script>
+  
+  
 </head>
 
 <body id="menu" class="body-page">
   <!--[if lt IE 8]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
+    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+ <![endif]-->
 
   <!-- Page Loader -->
   <div class="page-loader" id="page-loader">
     <div>
       <div class="icon ion-spin"></div>
-      <p>carregando</p>
+      <p><?php echo $page_loader; ?></p>
     </div>
   </div>
 
@@ -112,9 +122,12 @@
         <!-- Begin of CTA Actions, & Icons menu -->
         <ul class="navbar-nav navbar-nav-actions">
           <li class="nav-item">
-            <a class="btn btn-outline-white btn-round" href="#">
-              English
-            </a>
+<!--            <a id="idioms" idiom-target="en" class="btn btn-outline-white btn-round"></a>-->
+            
+            <a href="?lang=en" id="idioms-1" idiom-target="en" class="btn btn-outline-white btn-round langEN">EN</a>
+            
+            <a href="?lang=pt" id="idioms-2" idiom-target="pt" class="btn btn-outline-white btn-round langPT">PT</a>                                   
+            
           </li>
         </ul>
         <!-- End of CTA & Icons menu -->
@@ -133,37 +146,37 @@
           <li class="nav-item" data-menuanchor="about">
             <a href="#about">
               <i class="icon ion-ios-star-outline"></i>
-              <span class="txt">Por que a Ginger?</span>
+              <span class="txt"><?php echo $about; ?></span>
             </a>
           </li>
           <li class="nav-item" data-menuanchor="team">
             <a href="#team">
               <i class="icon ion-ios-people"></i>
-              <span class="txt">Quem somos</span>
+              <span class="txt"><?php echo $team; ?></span>
             </a>
           </li>          
           <li class="nav-item" data-menuanchor="services">
             <a href="#services">
               <i class="icon ion-ios-list-outline"></i>
-              <span class="txt">O que fazemos</span>
+              <span class="txt"><?php echo $services; ?></span>
             </a>
           </li>
           <li class="nav-item" data-menuanchor="clients">
             <a href="#clients">
               <i class="icon ion-ios-heart-outline"></i>
-              <span class="txt">Para quem fazemos</span>
+              <span class="txt"><?php echo $clients; ?></span>
             </a>
           </li>
           <li class="nav-item" data-menuanchor="testimonials">
             <a href="#testimonials">
               <i class="icon ion-ios-chatboxes-outline"></i>
-              <span class="txt">O que dizem</span>
+              <span class="txt"><?php echo $testimonials; ?></span>
             </a>
           </li>
           <li class="nav-item" data-menuanchor="contact">
             <a href="#contact">
               <i class="icon ion-ios-telephone-outline"></i>
-              <span class="txt">Contato</span>
+              <span class="txt"><?php echo $contact; ?></span>
             </a>
           </li>
           <li class="nav-item" data-menuanchor="tvlink">
@@ -205,8 +218,8 @@
                    
                   <!-- title and description -->
                   <div class="title-desc">
-                    <h2 class="display-4 display-title home-title anim-1">Inspiração</h2>
-                    <p class="anim-2">A gente ouve o que as pessoas dizem, entende o que elas querem dizer e presume o que elas não dizem. Essa escuta se transforma em insights criativos, únicos e relevantes para a sua empresa.</p>
+                    <h2 class="display-4 display-title home-title anim-1"><?php echo $home_h; ?></h2>
+                    <p class="anim-2"><?php echo $home_p1; ?></p>
                   </div>
                                    
                 </div>
@@ -231,7 +244,7 @@
         <footer class="section-footer scrolldown">
           <a class="down">
             <span class="icon"></span>
-            <span class="txt">Por que a Ginger?</span>
+            <span class="txt"><?php echo $about; ?></span>
           </a>
         </footer>
                             
@@ -247,17 +260,17 @@
        
             <!-- title -->
             <div class="section-title text-center">
-              <h2 class="display-4 display-title">Por que a Ginger?</h2>
+              <h2 class="display-4 display-title"><?php echo $about; ?></h2>
             </div>
 
             <!-- content -->
             <div class="section-content reduced anim text-center">
               <!-- title and description -->
                 <div class="title-desc anim-3 why-ginger-p"> 
-                    <p>Por que j&aacute; estivemos no seu lugar e sabemos o que espera de n&oacute;s.</p>
-                    <p>Atendimento s&ecirc;nior, projeto exclusivo, planejamento criativo, qualidade de execu&ccedil;&atilde;o, an&aacute;lises profundas e recomenda&ccedil;&otilde;es bem fundamentadas, impactantes e relevantes para o seu neg&oacute;cio.</p>
-                    <p>Como garantimos essa entrega?</p>
-                    <p>Reunindo um time de profissionais excepcionais, com trajet&oacute;rias diversas, liberdade criativa, profundo entendimento de marketing e estrat&eacute;gia, que trabalham juntos para construir soluções personalizadas, inovadoras e surpreendentes.</p>
+                    <p><?php echo $about_p1; ?></p>
+                    <p><?php echo $about_p2; ?></p>
+                    <p><?php echo $about_p3; ?></p>
+                    <p><?php echo $about_p4; ?></p>
                 </div>
             </div>
 
@@ -265,7 +278,7 @@
             <footer class="section-footer scrolldown">
               <a class="down">
                 <span class="icon"></span>
-                <span class="txt">Quem somos</span>
+                <span class="txt"><?php echo $team; ?></span>
               </a>
             </footer>
         
@@ -280,7 +293,7 @@
       <div class="section-wrapper center-vh dir-col anim">
         <!-- title -->
         <div class="section-title text-center">
-          <h2 class="display-4 display-title">Quem somos</h2>
+          <h2 class="display-4 display-title"><?php echo $team; ?></h2>
         </div>
 
         <!-- content -->
@@ -292,7 +305,7 @@
                         <div class="images text-center">
                             <div class="img-avatar-alpha">
                                 <div class="img-1">
-                                    <a href="pages/jose.html">
+                                    <a href="pages/jose.php">
                                         <img alt="Leia perfil José Antonio Moreira" class="img" src="img/team/thumb/_jose.png"/>
                                     </a>
                                 </div>
@@ -309,7 +322,7 @@
                         <div class="images text-center">
                             <div class="img-avatar-alpha">
                                 <div class="img-1 shadow">
-                                    <a href="pages/ana_amelia.html">
+                                    <a href="pages/ana_amelia.php">
                                         <img alt="Image" class="img" src="img/team/thumb/_ana_amelia.png" />
                                     </a>
                                 </div>
@@ -326,7 +339,7 @@
                         <div class="images text-center">
                             <div class="img-avatar-alpha">
                                 <div class="img-1 shadow">
-                                    <a href="pages/ines.html">
+                                    <a href="pages/ines.php">
                                         <img alt="Image" class="img" src="img/team/thumb/_ines.png" />
                                     </a>
                                 </div>
@@ -343,7 +356,7 @@
                         <div class="images text-center">
                             <div class="img-avatar-alpha">
                                 <div class="img-1 shadow">
-                                    <a href="pages/alejandrina.html">
+                                    <a href="pages/alejandrina.php">
                                         <img alt="Image" class="img" src="img/team/thumb/_alejandrina.png" />
                                     </a>
                                 </div>
@@ -360,7 +373,7 @@
                         <div class="images text-center">
                             <div class="img-avatar-alpha">
                                 <div class="img-1 shadow">
-                                    <a href="pages/denis.html">
+                                    <a href="pages/denis.php">
                                         <img alt="Image" class="img" src="img/team/thumb/_denis.png" />
                                     </a>
                                 </div>
@@ -377,7 +390,7 @@
                         <div class="images text-center">
                             <div class="img-avatar-alpha">
                                 <div class="img-1 shadow">
-                                    <a href="pages/laure.html">
+                                    <a href="pages/laure.php">
                                         <img alt="Image" class="img" src="img/team/thumb/_laure.png" />
                                     </a>
                                 </div>
@@ -394,7 +407,7 @@
                         <div class="images text-center">
                             <div class="img-avatar-alpha">
                                 <div class="img-1 shadow">
-                                    <a href="pages/tassia.html">
+                                    <a href="pages/tassia.php">
                                         <img alt="Image" class="img" src="img/team/thumb/_tassia.png" />
                                     </a>
                                 </div>
@@ -411,7 +424,7 @@
                         <div class="images text-center">
                             <div class="img-avatar-alpha">
                                 <div class="img-1 shadow">
-                                    <a href="pages/dani.html">
+                                    <a href="pages/dani.php">
                                         <img alt="Image" class="img" src="img/team/thumb/_dani.png" />
                                     </a>
                                 </div>
@@ -428,7 +441,7 @@
                         <div class="images text-center">
                             <div class="img-avatar-alpha">
                                 <div class="img-1 shadow">
-                                    <a href="pages/mariana.html">
+                                    <a href="pages/mariana.php">
                                         <img alt="Image" class="img" src="img/team/thumb/_mariana.png" />
                                     </a>
                                 </div>
@@ -445,7 +458,7 @@
                         <div class="images text-center">
                             <div class="img-avatar-alpha">
                                 <div class="img-1 shadow">
-                                    <a href="pages/ana_costa.html">
+                                    <a href="pages/ana_costa.php">
                                         <img alt="Image" class="img" src="img/team/thumb/_ana_costa.png" />
                                     </a>
                                 </div>
@@ -462,7 +475,7 @@
                         <div class="images text-center">
                             <div class="img-avatar-alpha">
                                 <div class="img-1 shadow">
-                                    <a href="pages/clara.html">
+                                    <a href="pages/clara.php">
                                         <img alt="Image" class="img" src="img/team/thumb/_clara.png" />
                                     </a>
                                 </div>
@@ -479,7 +492,7 @@
                         <div class="images text-center">
                             <div class="img-avatar-alpha">
                                 <div class="img-1 shadow">
-                                    <a href="pages/maisa.html">
+                                    <a href="pages/maisa.php">
                                         <img alt="Image" class="img" src="img/team/thumb/_maisa.png" />
                                     </a>
                                 </div>
@@ -496,7 +509,7 @@
                         <div class="images text-center">
                             <div class="img-avatar-alpha">
                                 <div class="img-1 shadow">
-                                    <a href="pages/marcia.html">
+                                    <a href="pages/marcia.php">
                                         <img alt="Image" class="img" src="img/team/thumb/_marcia.png" />
                                     </a>
                                 </div>
@@ -513,7 +526,7 @@
                         <div class="images text-center">
                             <div class="img-avatar-alpha">
                                 <div class="img-1 shadow">
-                                    <a href="pages/giuliana.html">
+                                    <a href="pages/giuliana.php">
                                         <img alt="Image" class="img" src="img/team/thumb/_giuliana.png" />
                                     </a>
                                 </div>
@@ -530,7 +543,7 @@
                         <div class="images text-center">
                             <div class="img-avatar-alpha">
                                 <div class="img-1 shadow">
-                                    <a href="pages/suely.html">
+                                    <a href="pages/suely.php">
                                         <img alt="Image" class="img" src="img/team/thumb/_suely.png" />
                                     </a>
                                 </div>
@@ -547,7 +560,7 @@
                         <div class="images text-center">
                             <div class="img-avatar-alpha">
                                 <div class="img-1 shadow">
-                                    <a href="pages/neide.html">
+                                    <a href="pages/neide.php">
                                         <img alt="Image" class="img" src="img/team/thumb/_neide.png" />
                                     </a>
                                 </div>
@@ -564,7 +577,7 @@
                         <div class="images text-center">
                             <div class="img-avatar-alpha">
                                 <div class="img-1 shadow">
-                                    <a href="pages/carol.html">
+                                    <a href="pages/carol.php">
                                         <img alt="Image" class="img" src="img/team/thumb/_carol.png" />
                                     </a>
                                 </div>
@@ -584,7 +597,7 @@
         <footer class="section-footer scrolldown">
           <a class="down">
             <span class="icon"></span>
-            <span class="txt">O que fazemos</span>
+            <span class="txt"><?php echo $services; ?></span>
           </a>
         </footer>
       </div>
@@ -598,7 +611,7 @@
       <div class="section-wrapper center-vh dir-col anim">
         <!-- title -->
         <div class="section-title text-center">
-          <h2 class="display-4 display-title">O que fazemos</h2>
+          <h2 class="display-4 display-title"><?php echo $services; ?></h2>
         </div>
         
         <!-- content -->
@@ -607,12 +620,12 @@
                 <div class="col-sm">
                     <div class="img-frame-normal">
                         <div class="img-1">
-                            <a href="./pages/riscos.html">
+                            <a href="./pages/riscos.php">
                                 <img class="img" src="img/projects/thumb/_riscos.png" alt="Image">
                             </a>
                         </div>
                         <div class="legend text-center">
-                            <h5>Reduzimos os riscos das suas decisões</h5>
+                            <h5><?php echo $services_p1; ?></h5>
                             <p class="small"></p>
                         </div>
                     </div>
@@ -621,12 +634,12 @@
                 <div class="col-sm">
                     <div class="img-frame-normal">
                         <div class="img-1">
-                            <a href="./pages/oportunidades.html">
+                            <a href="./pages/oportunidades.php">
                                 <img class="img" src="img/projects/thumb/_oprtunidades.png" alt="Image">
                             </a>
                         </div>
                         <div class="legend text-center">
-                            <h5>Descobrimos oportunidades de mercado</h5>
+                            <h5><?php echo $services_p2; ?></h5>
                             <p class="small"></p>
                         </div>
                     </div>
@@ -635,12 +648,12 @@
                 <div class="col-sm">
                     <div class="img-frame-normal">
                         <div class="img-1">
-                            <a href="./pages/performance.html">
+                            <a href="./pages/performance.php">
                                 <img class="img" src="img/projects/thumb/_performance.png" alt="Image">
                             </a>
                         </div>
                         <div class="legend text-center">
-                            <h5>Acompanhamos a performance dos seus negócios</h5>
+                            <h5><?php echo $services_p3; ?></h5>
                             <p class="small"></p>
                         </div>
                     </div>
@@ -654,7 +667,7 @@
         <footer class="section-footer scrolldown">
           <a class="down">
             <span class="icon"></span>
-            <span class="txt">Para quem fazemos</span>
+            <span class="txt"><?php echo $clients; ?></span>
           </a>
         </footer>
       </div>
@@ -668,7 +681,7 @@
       <div class="section-wrapper center-vh dir-col anim">
         <!-- title -->
         <div class="section-title text-center">
-          <h2 class="display-4 display-title">Para quem fazemos</h2>
+          <h2 class="display-4 display-title"><?php echo $clients; ?></h2>
         </div>
 
         <!-- content -->
@@ -682,7 +695,7 @@
         <footer class="section-footer scrolldown">
           <a class="down">
             <span class="icon"></span>
-            <span class="txt">O que dizem</span>
+            <span class="txt"><?php echo $testimonials; ?></span>
           </a>
         </footer>
         
@@ -697,7 +710,7 @@
       <div class="section-wrapper center-vh dir-col anim">
         <!-- title -->
         <div class="section-title text-center">
-          <h2 class="display-4 display-title">O que dizem</h2>
+          <h2 class="display-4 display-title"><?php echo $testimonials; ?></h2>
         </div>
 
         <!-- content -->
@@ -743,7 +756,7 @@
                       <div class="text-testimonials" href="#">
                           <div class="verticalFixWrapper">
                               <div class="verticalFixObjs">
-                                   <p>A Ginger é uma empresa muito parceira, está sempre disposta a ajudar a entender nosso problema e principalmente a resolver! É uma empresa que não tem dia e nem hora, sempre que precisei eles estavam disponíveis.</p>
+                                   <p><?php echo $testimonials_p1; ?></p>
                                    <p>Thaina Luciana Vindonssky Ferreti, Consumer Insight Seara-JBS</p>
                               </div>
                           </div>
@@ -757,7 +770,7 @@
                       <div class="text-testimonials" href="#">
                           <div class="verticalFixWrapper">
                               <div class="verticalFixObjs">
-                                   <p>Nos quedamos muy satisfechos con el trabajo realizado desde el equipo de experiencia de usuario y con puntos clave para explorar mejoras en las siguientes versiones del producto.</p>
+                                   <p><?php echo $testimonials_p2; ?></p>
                                    <p>Luis Miguel Dominguez Espinoza, UX Design Research Telefonica CCDO</p>
                               </div>
                           </div>
@@ -799,7 +812,7 @@
                       <div class="text-testimonials" href="#">
                           <div class="verticalFixWrapper">
                               <div class="verticalFixObjs">
-                                   <p>Sempre muito bom contar com a parceria, expertise e flexibilidade de vocês. Os dados que vocês nos enviaram foram fundamentais para abordar este tema com nosso CEO Global.</p>
+                                   <p><?php echo $testimonials_p3; ?></p>
                                    <p>Mariana Albuquerque, Consumer Data&Insights Reckitt Benckiser</p>
                               </div>
                           </div>
@@ -840,7 +853,7 @@
         <footer class="section-footer scrolldown">
           <a class="down">
             <span class="icon"></span>
-            <span class="txt">Contato</span>
+            <span class="txt"><?php echo $contact; ?></span>
           </a>
         </footer>
         
@@ -856,7 +869,7 @@
         <div class="section-wrapper">
           <!-- title -->
             <div class="section-title text-center">
-                <h2 class="display-4 display-title">Contato</h2>
+                <h2 class="display-4 display-title"><?php echo $contact; ?></h2>
             </div>
             
             <div class="contact-wrapper">
@@ -864,7 +877,7 @@
                 <div class="row" style="margin: 0;">
                    
                     <div class="col-sm">
-                        <p>Vamos conversar?<br>Ligue, escreva, ou chame no WhatsApp.</p>
+                        <p><?php echo $contact_p1; ?><br><?php echo $contact_p2; ?></p>
                     </div>
                    
                     <div class="col-sm orange">
@@ -962,7 +975,7 @@
   <script src="./js/vendor/all.js"></script>
 
   <!-- Countdown script -->
-  <script src="./js/jquery.downCount.js"></script>
+<!--  <script src="./js/jquery.downCount.js"></script>-->
 
   <!-- Javascript main files -->
   <script src="./js/main.js"></script>
@@ -972,8 +985,7 @@
   
   <!-- Owl Carousel ('#team') -->
   <script src="./js/owl.carousel.js"></script>
-
-
+  
 </body>
 
 </html>
